@@ -1,0 +1,12 @@
+.messageForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  flex-direction: column;
+}
+
+.messageInput {
+  background-color: aquamarine;
+  color: aquamarine;
+}
