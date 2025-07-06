@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="./common.css" />
+    <title>Socket.IO chat</title>
+  </head>
+  <body>
+    <ul class="pagelist">
+      <li class="login-page">
+        <section class="login-form">
+          <h1>ログイン</h1>
+          <div>
+            <p>ユーザー名</p>
+            <input type="text" class="usernameInput" id="usernameInput" />
+            <button class="loginbtn" id="loginbtn">ログイン</button>
+          </div>
+        </section>
+      </li>
+      <li class="main-page">
+        <ul id="messages" class="messageList">
+          <li class="message myuser">
+            <p>ようこそ</p>
+          </li>
+          <li class="message otheruser">
+            <p>ありがとう</p>
+          </li>
+        </ul>
+        <form id="messageForm" class="messageForm" action="">
+          <input id="messageInput" class="messageInput" autocomplete="off" />
+          <button id="messageSubmitBtn" class="messageSubmitBtn">送信</button>
+        </form>
+      </li>
+    </ul>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./socket.io/socket.io.js"></script>
+  <script src="./main.js"></script>
+</html>
