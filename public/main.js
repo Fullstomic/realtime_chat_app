@@ -4,6 +4,9 @@ $(function () {
   const $message_input = $("#messageInput");
   const $message_submit_button = $("#messageSubmitBtn");
 
+  const $username_input = $("#usernameInput");
+  const $login_button = $("#loginbtn");
+
   const onSendMessage = () => {
     const messageInputValue = $message_input.val().trim();
     if (messageInputValue) {
@@ -12,7 +15,18 @@ $(function () {
     }
   };
 
+  const onLogin = () => {
+    const usernameInputValue = $username_input.val().trim();
+    if (usernameInputValue) {
+      socket.emit("login", usernameInputValue);
+      $message_input.val = "";
+    }
+  };
+
   $message_submit_button.on("click", function () {
     onSendMessage();
+  });
+  $login_button.on("click", function () {
+    onLogin();
   });
 });
