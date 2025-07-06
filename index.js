@@ -13,7 +13,7 @@ io.on("connection", (socket) => {
   console.log("connection");
   socket.on("login", (username) => {
     socket.username = username;
-    socket.emit("login", socket.username);
+    socket.join();
   });
   socket.on("chat message", (msg, username) => {
     socket.emit("reception message", username, msg);
