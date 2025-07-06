@@ -6,11 +6,23 @@
     <title>Socket.IO chat</title>
   </head>
   <body>
-    <ul id="messages"></ul>
-    <form id="messageForm" class="messageForm" action="">
-      <input id="messageInput" class="messageInput" autocomplete="off" />
-      <button id="messageSubmitBtn">Send</button>
-    </form>
+    <ul class="pagelist">
+      <li class="login-page"></li>
+      <li class="main-page">
+        <ul id="messages" class="messageList">
+          <li class="message myuser">
+            <p>ようこそ</p>
+          </li>
+          <li class="message otheruser">
+            <p>ありがとう</p>
+          </li>
+        </ul>
+        <form id="messageForm" class="messageForm" action="">
+          <input id="messageInput" class="messageInput" autocomplete="off" />
+          <button id="messageSubmitBtn" class="messageSubmitBtn">送信</button>
+        </form>
+      </li>
+    </ul>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="./socket.io/socket.io.js"></script>
